@@ -1,0 +1,2 @@
+// Icon for the example programs. SimplyUI uses the first icon in the .exe for the window.
+1 ICON "app.ico"

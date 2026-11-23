@@ -1,0 +1,38 @@
+// Version information shown in the DLL's Properties > Details (version comes from simplyui.h).
+#include <winver.h>
+#include "../include/simplyui.h"
+
+#ifdef SUI_32BIT
+#define SUI_FILE_NAME "simplyui32.dll"
+#else
+#define SUI_FILE_NAME "simplyui.dll"
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     SIMPLYUI_VERSION_MAJOR, SIMPLYUI_VERSION_MINOR, SIMPLYUI_VERSION_PATCH, 0
+PRODUCTVERSION  SIMPLYUI_VERSION_MAJOR, SIMPLYUI_VERSION_MINOR, SIMPLYUI_VERSION_PATCH, 0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "inrune"
+            VALUE "FileDescription",  "SimplyUI - GUI library for Windows tools"
+            VALUE "FileVersion",      SIMPLYUI_VERSION
+            VALUE "InternalName",     "simplyui"
+            VALUE "LegalCopyright",   "Copyright (c) 2026 inrune. MIT License."
+            VALUE "OriginalFilename", SUI_FILE_NAME
+            VALUE "ProductName",      "SimplyUI"
+            VALUE "ProductVersion",   SIMPLYUI_VERSION
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
